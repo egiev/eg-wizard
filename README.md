@@ -20,14 +20,14 @@ Use the eg-wizard component to define your wizard steps:
     key="step1"
     [options]="{ progressBar: { title: 'Step 1', description: 'Registration' } }"
   >
-    <app-step1 *egWizardSection></app-step1>
+    <app-step1 *egWizardStep></app-step1>
   </eg-wizard-step>
 
   <eg-wizard-step
     key="step2"
     [options]="{ progressBar: { title: 'Step 2', description: 'OTP' } }"
   >
-    <app-step2 *egWizardSection></app-step2>
+    <app-step2 *egWizardStep></app-step2>
   </eg-wizard-step>
 
   <eg-wizard-step
@@ -36,12 +36,12 @@ Use the eg-wizard component to define your wizard steps:
       progressBar: { title: 'Step 3', description: 'Complete' }
     }"
   >
-    <app-step3 *egWizardSection></app-step3>
+    <app-step3 *egWizardStep></app-step3>
   </eg-wizard-step>
 </eg-wizard>
 ```
 
-> Note: Don't forget to add **\*egWizardSection** directive on your components.
+> Note: Don't forget to add **\*egWizardStep** directive on your components.
 
 To navigate the steps, use the EgWizardService service:
 
