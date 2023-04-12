@@ -1,0 +1,9 @@
+{
+  "$schema": "../../../node_modules/@angular-devkit/schematics/collection-schema.json",
+  "schematics": {
+    "ng-add": {
+      "description": "Add EG wizard to your project",
+      "factory": "./ng-add/index#ngAdd"
+    }
+  }
+}

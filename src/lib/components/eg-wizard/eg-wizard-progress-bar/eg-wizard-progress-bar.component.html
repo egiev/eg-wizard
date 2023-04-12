@@ -1,0 +1,27 @@
+<div class="progress-bar">
+  <ng-container *ngFor="let step of steps; let idx = index">
+    <div
+      #item
+      *ngIf="!step.options?.progressBar?.hidden"
+      class="progress-bar item"
+      [ngClass]="{ active: idx <= ((currentStepIndex | async) || 0) }"
+    >
+      <span *ngIf="!config.progressBar?.title?.hidden" class="title">
+        {{ step.options?.progressBar?.title || "" }}
+      </span>
+      <span
+        *ngIf="!config.progressBar?.description?.hidden"
+        class="description"
+      >
+        {{ step.options?.progressBar?.description || "" }}
+      </span>
+
+      <div class="indicator">
+        <span class="circle">
+          <span class="inner-circle"></span>
+          <span class="line"> </span>
+        </span>
+      </div>
+    </div>
+  </ng-container>
+</div>
