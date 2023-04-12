@@ -55,6 +55,7 @@ export class EgWizardProgressBarComponent implements OnInit {
         const el = i.nativeElement;
         const active = el.classList.contains('active');
         const title = el.querySelector('.title');
+        const smTitle = el.querySelector('.sm-title');
         const description = el.querySelector('.description');
         const circle = el.querySelector('.circle');
         const innerCircle = el.querySelector('.inner-circle');
@@ -64,7 +65,10 @@ export class EgWizardProgressBarComponent implements OnInit {
           ? titleConfig?.activeStyles
           : titleConfig?.styles;
 
-        if (titleStyles) this.applyStyles(title, titleStyles);
+        if (titleStyles) {
+          this.applyStyles(title, titleStyles);
+          this.applyStyles(smTitle, titleStyles);
+        }
 
         const descriptionStyles = active
           ? descriptionConfig?.activeStyles

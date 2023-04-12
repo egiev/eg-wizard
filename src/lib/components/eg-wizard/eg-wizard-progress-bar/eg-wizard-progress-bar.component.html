@@ -7,14 +7,17 @@
       [ngClass]="{ active: idx <= ((currentStepIndex | async) || 0) }"
     >
       <span *ngIf="!config.progressBar?.title?.hidden" class="title">
-        {{ step.options?.progressBar?.title || "" }}
+        {{ step.options?.progressBar?.title || '' }}
       </span>
       <span
         *ngIf="!config.progressBar?.description?.hidden"
         class="description"
       >
-        {{ step.options?.progressBar?.description || "" }}
+        {{ step.options?.progressBar?.description || '' }}
       </span>
+
+      <!-- Title for sm screen resolution -->
+      <span class="sm-title">{{ idx + 1 }}</span>
 
       <div class="indicator">
         <span class="circle">

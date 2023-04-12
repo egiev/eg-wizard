@@ -15,6 +15,10 @@
   position: relative;
 }
 
+.progress-bar .sm-title {
+  display: none;
+}
+
 .progress-bar .indicator {
   height: 30px;
   margin-top: auto;
@@ -59,4 +63,15 @@
   position: relative;
   top: 7px;
   z-index: 2;
+}
+
+@media only screen and (max-width: 425px) {
+  .title,
+  .description {
+    display: none;
+  }
+
+  .progress-bar .sm-title {
+    display: block;
+  }
 }
